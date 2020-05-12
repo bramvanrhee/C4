@@ -2,11 +2,42 @@
 <html lang="nl" dir="ltr">
   <head>
     <meta charset="utf-8">
-    <title></title>
+    <title>inleveropdracht A</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous"
   </head>
   <body>
 
-    <div ng-app="formApp" ng-controller="formCtrl">
+    <div class="container mt-5">
+      <div class="row">
+        <div class="col-12">
+
+          <div ng-app="formApp" ng-controller="formCtrl">
+            <form>
+              <label for="voornaam">Voornaam: </label>
+              <input type="text" class="form-control" id="voornaam" ng-model="voornaam">
+
+              <label for="achternaam">Achternaam: </label>
+              <input type="text" class="form-control" id="achternaam" ng-model="achternaam">
+
+              <label for="adres">Adres: </label>
+              <input type="text" class="form-control" id="adres" ng-model="adres">
+
+              <label for="huisnummer">Huisnummer: </label>
+              <input type="text" class="form-control" id="huisnummer" ng-model="huisnummer">
+
+              <label for="postcode">Postcode: </label>
+              <input type="text" class="form-control" id="postcode" ng-model="postcode">
+
+              <label for="woonplaats">Woonplaats: </label>
+              <input type="text" class="form-control" id="woonplaats" ng-model="woonplaats">
+
+              <label for="email">Email: </label>
+              <input type="text" class="form-control" id="email" ng-model="email">
+            </form>
+          </div>
+
+        </div>
+      </div>
     </div>
 
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
