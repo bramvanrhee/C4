@@ -17,3 +17,7 @@ h1 {
 .form-group .ng-untouched {
   border-color: black;
 }
+
+.form-control:focus {
+  box-shadow: unset;
+}
