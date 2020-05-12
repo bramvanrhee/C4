@@ -1,5 +1,5 @@
 var app = angular.module('formApp', []);
-  app.controller('formCtrl', function($scope)) {
+app.controller('formCtrl', function($scope) {
     $scope.voornaam;
     $scope.achternaam;
     $scope.adres;
@@ -7,4 +7,4 @@ var app = angular.module('formApp', []);
     $scope.postcode;
     $scope.woonplaats;
     $scope.email;
-  }
+});
