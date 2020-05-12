@@ -20,42 +20,80 @@
               <div class="form-row">
                 <div class="form-group col-12 col-sm-6">
                   <label for="voornaam">Voornaam: </label>
-                  <input type="text" class="form-control" id="voornaam" ng-model="voornaam">
+                  <input type="text" class="form-control" id="voornaam" ng-model="voornaam" required>
                 </div>
 
                 <div class="form-group col-12 col-sm-6">
                   <label for="achternaam">Achternaam: </label>
-                  <input type="text" class="form-control" id="achternaam" ng-model="achternaam">
+                  <input type="text" class="form-control" id="achternaam" ng-model="achternaam" required>
                 </div>
 
                 <div class="form-group col-8">
                   <label for="adres">Adres: </label>
-                  <input type="text" class="form-control" id="adres" ng-model="adres">
+                  <input type="text" class="form-control" id="adres" ng-model="adres" required>
                 </div>
 
                 <div class="form-group col-4">
                   <label for="huisnummer">Huisnummer: </label>
-                  <input type="text" class="form-control" id="huisnummer" ng-model="huisnummer">
+                  <input type="text" class="form-control" id="huisnummer" ng-model="huisnummer" required>
                 </div>
 
                 <div class="form-group col-12 col-sm-4">
                   <label for="postcode">Postcode: </label>
-                  <input type="text" class="form-control" id="postcode" ng-model="postcode">
+                  <input type="text" class="form-control" id="postcode" ng-model="postcode" required>
                 </div>
 
                 <div class="form-group col-12 col-sm-8">
                   <label for="woonplaats">Woonplaats: </label>
-                  <input type="text" class="form-control" id="woonplaats" ng-model="woonplaats">
+                  <input type="text" class="form-control" id="woonplaats" ng-model="woonplaats" required>
                 </div>
 
                 <div class="form-group col-12">
                   <label for="email">Email: </label>
-                  <input type="text" class="form-control" id="email" ng-model="email">
+                  <input type="text" class="form-control" id="email" ng-model="email" required>
+                </div>
+
+                <div class="col-12">
+                  <input type="submit" id="submit" class="btn btn-primary">
                 </div>
               </div>
             </form>
 
-            <p>Voornaam: {{ voornaam }}</p>
+            <table class="table mt-5">
+              <thead class="thead-light">
+                <tr>
+                  <th scope="col">Form gegevens</th>
+                  <th scope="col"></th>
+                </tr>
+              </thead>
+
+              <tbody>
+                <tr>
+                  <th scope="row">Voornaam</th>
+                  <td>{{ voornaam }}</td>
+                </tr>
+
+                <tr>
+                  <th scope="row">Achternaam</th>
+                  <td>{{ achternaam }}</td>
+                </tr>
+
+                <tr>
+                  <th scope="row">Adres en Huisnummer</th>
+                  <td>{{ adres }} {{ huisnummer }}</td>
+                </tr>
+
+                <tr>
+                  <th scope="row">Postcode en Woonplaats</th>
+                  <td>{{ postcode }} {{ woonplaats }}</td>
+                </tr>
+
+                <tr>
+                  <th scope="row">Emailadres</th>
+                  <td>{{ email }}</td>
+                </tr>
+              </tbody>
+            </table>
 
           </div>
 
