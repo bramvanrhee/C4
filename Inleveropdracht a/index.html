@@ -3,7 +3,8 @@
   <head>
     <meta charset="utf-8">
     <title>inleveropdracht A</title>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous"
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="main.css">
   </head>
   <body>
 
@@ -11,29 +12,49 @@
       <div class="row">
         <div class="col-12">
 
+          <h1>Form Inleveropdracht A</h1>
+
           <div ng-app="formApp" ng-controller="formCtrl">
             <form>
-              <label for="voornaam">Voornaam: </label>
-              <input type="text" class="form-control" id="voornaam" ng-model="voornaam">
 
-              <label for="achternaam">Achternaam: </label>
-              <input type="text" class="form-control" id="achternaam" ng-model="achternaam">
+              <div class="form-row">
+                <div class="form-group col-12 col-sm-6">
+                  <label for="voornaam">Voornaam: </label>
+                  <input type="text" class="form-control" id="voornaam" ng-model="voornaam">
+                </div>
 
-              <label for="adres">Adres: </label>
-              <input type="text" class="form-control" id="adres" ng-model="adres">
+                <div class="form-group col-12 col-sm-6">
+                  <label for="achternaam">Achternaam: </label>
+                  <input type="text" class="form-control" id="achternaam" ng-model="achternaam">
+                </div>
 
-              <label for="huisnummer">Huisnummer: </label>
-              <input type="text" class="form-control" id="huisnummer" ng-model="huisnummer">
+                <div class="form-group col-8">
+                  <label for="adres">Adres: </label>
+                  <input type="text" class="form-control" id="adres" ng-model="adres">
+                </div>
 
-              <label for="postcode">Postcode: </label>
-              <input type="text" class="form-control" id="postcode" ng-model="postcode">
+                <div class="form-group col-4">
+                  <label for="huisnummer">Huisnummer: </label>
+                  <input type="text" class="form-control" id="huisnummer" ng-model="huisnummer">
+                </div>
 
-              <label for="woonplaats">Woonplaats: </label>
-              <input type="text" class="form-control" id="woonplaats" ng-model="woonplaats">
+                <div class="form-group col-12 col-sm-4">
+                  <label for="postcode">Postcode: </label>
+                  <input type="text" class="form-control" id="postcode" ng-model="postcode">
+                </div>
 
-              <label for="email">Email: </label>
-              <input type="text" class="form-control" id="email" ng-model="email">
+                <div class="form-group col-12 col-sm-8">
+                  <label for="woonplaats">Woonplaats: </label>
+                  <input type="text" class="form-control" id="woonplaats" ng-model="woonplaats">
+                </div>
+
+                <div class="form-group col-12">
+                  <label for="email">Email: </label>
+                  <input type="text" class="form-control" id="email" ng-model="email">
+                </div>
+              </div>
             </form>
+
           </div>
 
         </div>
