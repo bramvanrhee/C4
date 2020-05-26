@@ -27,34 +27,33 @@
 
           <div ng-app="autoApp" ng-controller="autoCtrl">
 
-              <table class="table">
-                <thead class="thead-light">
-                  <tr>
-                    <th scope="col">Auto nummer</th>
-                    <th scope="col">Kenteken</th>
-                    <th scope="col">Automerk</th>
-                    <th scope="col">Kleur</th>
-                    <th scope="col">Deuren</th>
-                    <th scope="col">Prijs</th>
-                  </tr>
-                </thead>
+            <table class="table">
+              <thead class="thead-light">
+                <tr>
+                  <th scope="col" ng-click="orderByMe('autonummer')">Auto nummer</th>
+                  <th scope="col" ng-click="orderByMe('kenteken')">Kenteken</th>
+                  <th scope="col" ng-click="orderByMe('merk')">Automerk</th>
+                  <th scope="col" ng-click="orderByMe('kleur')">Kleur</th>
+                  <th scope="col" ng-click="orderByMe('aantaldeuren')">Deuren</th>
+                  <th scope="col" ng-click="orderByMe('prijs')">Prijs</th>
+                </tr>
+              </thead>
 
-                <tbody ng-repeat ="all in autos">
-                  <tr>
-                    <th>Auto {{$index+1}}</th>
-                    <th><span class="ng-normal" ng-bind="autos[$index].kenteken"></span></th>
-                    <th><span class="ng-normal" ng-bind="autos[$index].merk | uppercase"></span></th>
-                    <th><span class="ng-normal" ng-bind="autos[$index].kleur"></span></th>
-                    <th><span class="ng-normal" ng-bind="autos[$index].aantaldeuren"></span></th>
-                    <th><span class="ng-normal" ng-bind="autos[$index].prijs | currency:'€'"></span></th>
-                  </tr>
-                </tbody>
-              </table>
+              <tbody ng-repeat ="auto in autos | orderBy:myOrderBy">
+                <tr>
+                  <th>Auto {{$index+1}}</th>
+                  <th><span class="ng-normal" ng-bind="auto.kenteken"></span></th>
+                  <th><span class="ng-normal" ng-bind="auto.merk | uppercase"></span></th>
+                  <th><span class="ng-normal" ng-bind="auto.kleur"></span></th>
+                  <th><span class="ng-normal" ng-bind="auto.aantaldeuren"></span></th>
+                  <th><span class="ng-normal" ng-bind="auto.prijs | currency:'€'"></span></th>
+                </tr>
+              </tbody>
+            </table>
 
-            </div>
           </div>
-
         </div>
+
       </div>
     </div>
 
