@@ -27,6 +27,8 @@
 
           <div ng-app="autoApp" ng-controller="autoCtrl">
 
+            <input type="text" ng-model="filterTable">
+
             <table class="table">
               <thead class="thead-light">
                 <tr>
@@ -39,7 +41,7 @@
                 </tr>
               </thead>
 
-              <tbody ng-repeat ="auto in autos | orderBy:myOrderBy">
+              <tbody ng-repeat ="auto in autos | orderBy:myOrderBy | filter:filterTable">
                 <tr>
                   <th>Auto {{$index+1}}</th>
                   <th><span class="ng-normal" ng-bind="auto.kenteken"></span></th>
