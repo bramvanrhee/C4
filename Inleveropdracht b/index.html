@@ -46,7 +46,7 @@
                     <th><span class="ng-normal" ng-bind="autos[$index].merk | uppercase"></span></th>
                     <th><span class="ng-normal" ng-bind="autos[$index].kleur"></span></th>
                     <th><span class="ng-normal" ng-bind="autos[$index].aantaldeuren"></span></th>
-                    <th><span class="ng-normal" ng-bind="autos[$index].prijs"></span></th>
+                    <th><span class="ng-normal" ng-bind="autos[$index].prijs | currency:'€'"></span></th>
                   </tr>
                 </tbody>
               </table>
