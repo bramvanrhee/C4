@@ -43,7 +43,7 @@
                   <tr>
                     <th>Auto {{$index+1}}</th>
                     <th><span class="ng-normal" ng-bind="autos[$index].kenteken"></span></th>
-                    <th><span class="ng-normal" ng-bind="autos[$index].merk"></span></th>
+                    <th><span class="ng-normal" ng-bind="autos[$index].merk | uppercase"></span></th>
                     <th><span class="ng-normal" ng-bind="autos[$index].kleur"></span></th>
                     <th><span class="ng-normal" ng-bind="autos[$index].aantaldeuren"></span></th>
                     <th><span class="ng-normal" ng-bind="autos[$index].prijs"></span></th>
