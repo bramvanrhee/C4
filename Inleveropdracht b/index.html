@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="nl" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <title>inleveropdracht B</title>
+  </head>
+  <body>
+
+    <style>
+      p {
+        font-weight: bold;
+      }
+      .ng-scope {
+        margin-bottom: 2.5rem;
+      }
+      .ng-normal {
+        font-weight: normal;
+      }
+    </style>
+
+    <div class="container mt-5">
+      <div class="row">
+        <div class="col-12">
+
+          <h1>Auto's table array</h1>
+
+          <div ng-app="">
+            <div ng-init="autos=[{kenteken:'04-vst-vt',kleur:'mat zwart',merk:'audi',aantaldeuren:'5'},{kenteken:'04-vt-23',kleur:'Geel',merk:'mercedes',aantaldeuren:'4'},{kenteken:'06-fd-tt',kleur:'grijs',merk:'volkswagen',aantaldeuren:'3'},{kenteken:'32-vc-aa',kleur:'zwart',merk:'kia',aantaldeuren:'3'},{kenteken:'10-da-45',kleur:'rood',merk:'ferrari',aantaldeuren:'2'}]">
+              <table class="table">
+                <thead class="thead-light">
+                  <tr>
+                    <th scope="col">Auto nummer</th>
+                    <th scope="col">Kenteken</th>
+                    <th scope="col">Automerk</th>
+                    <th scope="col">Kleur</th>
+                    <th scope="col">Deuren</th>
+                  </tr>
+                </thead>
+
+                <tbody ng-repeat ="all in autos">
+                  <tr>
+                    <th>Auto {{$index+1}}</th>
+                    <th><span class="ng-normal" ng-bind="autos[$index].kenteken"></span></th>
+                    <th><span class="ng-normal" ng-bind="autos[$index].merk"></span></th>
+                    <th><span class="ng-normal" ng-bind="autos[$index].kleur"></span></th>
+                    <th><span class="ng-normal" ng-bind="autos[$index].aantaldeuren"></span></th>
+                  </tr>
+                </tbody>
+              </table>
+
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.9/angular.min.js"></script>
+  </body>
+</html>
