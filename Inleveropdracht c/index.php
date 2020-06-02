@@ -7,6 +7,38 @@
   </head>
   <body>
 
+    <div class="container mt-5">
+      <div class="row">
+        <div class="col-12">
+
+          <div ng-app="myApp" ng-controller="customersCtrl">
+
+            <table class="table">
+              <thead clas="thead-light">
+                <tr>
+                  <th scope="col">Bedrijfsnaam</th>
+                  <th scope="col">Adres</th>
+                  <th scope="col">Woonplaats</th>
+                  <th scope="col">Telefoonnummer</th>
+                </tr>
+              </thead>
+
+              <tbody>
+                <tr ng-repeat="x in bedrijf">
+                  <td> {{ x.Bedrijfsnaam }}</td>
+                  <td> {{ x.Adres }}</td>
+                  <td> {{ x.Woonplaats }}</td>
+                  <td> {{ x.Telefoonnummer }}</td>
+                </tr>
+              </tbody>
+            </table>
+
+          </div>
+
+        </div>
+      </div>
+    </div>
+
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.9/angular.min.js"></script>
     <script src="main.js"></script>
   </body>
