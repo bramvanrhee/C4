@@ -2,7 +2,7 @@
   header("Access-Control-Allow-Origin: *");
   header("Content-Type: application/json; charset=UTF-8");
 
-  $conn = new mysqli("localhost", "root", "", "bedrijf");
+  $conn = new mysqli("localhost", "root", "", "c4");
   $result = $conn->query("SELECT bedrijfsnaam, adres, woonplaats, telnr FROM bedrijf");
   $outp = "";
 
